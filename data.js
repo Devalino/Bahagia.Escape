@@ -6,7 +6,7 @@ const CONFIG = {
   brand: "Bahagia.Escape",
   whatsapp: "6285815951005",          // +62 858-1595-1005 (format wa.me: tanpa + dan tanpa spasi)
   whatsappDisplay: "+62 858-1595-1005",
-  email: "hello@example.com",         // TODO: DUMMY — ganti dengan email asli
+  email: "muhammadyusufalfarizi98@gmail.com",         // TODO: DUMMY — ganti dengan email asli
   owner: "Muhammad Yusuf Alfarizi",
 };
 
