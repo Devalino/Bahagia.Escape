@@ -21,7 +21,7 @@ const VEHICLES = [
     name: "Toyota Veloz",
     status: "available_on_request",
     visible: true,
-    photo: "assets/vehicle-placeholder.svg",   // TODO: ganti foto asli
+    photo: "assets/veloz-non-hybrid.webp",   // TODO: ganti foto asli
     // Isi jika sudah pasti. Kosong (null) = tidak ditampilkan.
     specs: { passengers: null, luggage: null, features: null },
   },
@@ -30,7 +30,7 @@ const VEHICLES = [
     name: "Toyota Veloz Hybrid",
     status: "available_on_request",
     visible: true,
-    photo: "assets/vehicle-placeholder.svg",
+    photo: "assets/veloz-hybrid.webp",
     specs: { passengers: null, luggage: null, features: null },
   },
   {
@@ -38,7 +38,7 @@ const VEHICLES = [
     name: "Toyota Zenix",
     status: "unavailable",
     visible: true,
-    photo: "assets/vehicle-placeholder.svg",
+    photo: "assets/zenix.png",
     specs: { passengers: null, luggage: null, features: null },
   },
 ];
