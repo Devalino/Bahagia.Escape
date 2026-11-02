@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bahagia.Escape</title>
+<meta name="description" content="">
+<meta name="theme-color" content="#2F6B3B">
+<link rel="icon" href="assets/logo-b.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="Bahagia.Escape">
+      <img src="assets/logo-b.png" alt="" width="30" height="34">
+      <span>Bahagia<b>.Escape</b></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#services" data-i18n="nav.services"></a>
+      <a href="#fleet" data-i18n="nav.fleet"></a>
+      <a href="#how" data-i18n="nav.how"></a>
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+    </nav>
+    <div class="nav__right">
+      <div class="lang" role="group" data-i18n-aria="lang.label">
+        <button type="button" data-lang="id">ID</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a class="btn btn--accent btn--sm" href="#book" data-i18n="nav.book"></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero__in">
+      <p class="eyebrow" data-i18n="hero.tagline"></p>
+      <h1 data-i18n="hero.title"></h1>
+      <p class="lead" data-i18n="hero.sub"></p>
+      <div class="hero__cta">
+        <a class="btn btn--accent" href="#book" data-i18n="hero.cta"></a>
+        <a class="btn btn--ghost" data-wa-link href="#" target="_blank" rel="noopener" data-i18n="hero.wa"></a>
+      </div>
+      <p class="hero__note" data-i18n="hero.note"></p>
+    </div>
+    <svg class="hero__leaf" viewBox="0 0 400 400" aria-hidden="true"><path d="M60 340C60 170 170 60 340 60c0 170-110 280-280 280Z" fill="currentColor"/><path d="M60 340 250 150" stroke="#F1EDE0" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <h2 data-i18n="services.title"></h2>
+      <p class="sec__sub" data-i18n="services.sub"></p>
+      <div class="grid grid--4" id="services-grid"></div>
+    </div>
+  </section>
+
+  <section class="sec sec--tint" id="fleet">
+    <div class="wrap">
+      <h2 data-i18n="fleet.title"></h2>
+      <p class="sec__sub" data-i18n="fleet.sub"></p>
+      <div class="grid grid--fleet" id="fleet-grid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <h2 data-i18n="how.title"></h2>
+      <ol class="steps">
+        <li><b>1</b><h3 data-i18n="how.s1.t"></h3><p data-i18n="how.s1.d"></p></li>
+        <li><b>2</b><h3 data-i18n="how.s2.t"></h3><p data-i18n="how.s2.d"></p></li>
+        <li><b>3</b><h3 data-i18n="how.s3.t"></h3><p data-i18n="how.s3.d"></p></li>
+        <li><b>4</b><h3 data-i18n="how.s4.t"></h3><p data-i18n="how.s4.d"></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec sec--tint" id="book">
+    <div class="wrap wrap--narrow">
+      <h2 data-i18n="form.title"></h2>
+      <p class="sec__sub" data-i18n="form.sub"></p>
+      <form id="booking" novalidate>
+        <div class="form-error" id="form-error" role="alert" hidden data-i18n="err.summary"></div>
+
+        <div class="field">
+          <label for="service" data-i18n="form.service"></label>
+          <select id="service" name="service" required></select>
+          <p class="err" data-err-for="service"></p>
+        </div>
+
+        <div class="field">
+          <label for="vehicle" data-i18n="form.vehicle"></label>
+          <select id="vehicle" name="vehicle"></select>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="name" data-i18n="form.name"></label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <p class="err" data-err-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="phone" data-i18n="form.phone"></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+            <p class="hint" data-i18n="form.phoneHint"></p>
+            <p class="err" data-err-for="phone"></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="pickup" data-i18n="form.pickup"></label>
+          <input id="pickup" name="pickup" type="text" required>
+          <p class="err" data-err-for="pickup"></p>
+        </div>
+        <div class="field">
+          <label for="dest" data-i18n="form.dest"></label>
+          <input id="dest" name="dest" type="text" required>
+          <p class="err" data-err-for="dest"></p>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="date" data-i18n="form.date"></label>
+            <input id="date" name="date" type="date" required>
+            <p class="err" data-err-for="date"></p>
+          </div>
+          <div class="field">
+            <label for="time" data-i18n="form.time"></label>
+            <input id="time" name="time" type="time" required>
+            <p class="err" data-err-for="time"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="pax" data-i18n="form.pax"></label>
+            <input id="pax" name="pax" type="number" min="1" inputmode="numeric" value="1" required>
+            <p class="err" data-err-for="pax"></p>
+          </div>
+          <div class="field">
+            <label for="luggage" data-i18n="form.luggage"></label>
+            <input id="luggage" name="luggage" type="number" min="0" inputmode="numeric" value="0">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="flight" data-i18n="form.flight"></label>
+          <input id="flight" name="flight" type="text" autocapitalize="characters" placeholder="GA 123">
+        </div>
+        <div class="field">
+          <label for="notes" data-i18n="form.notes"></label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <button class="btn btn--accent btn--block" type="submit" data-i18n="form.submit"></button>
+        <p class="hint hint--center" data-i18n="form.after"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="wrap wrap--narrow">
+      <h2 data-i18n="about.title"></h2>
+      <p data-i18n="about.p1" data-owner></p>
+      <p data-i18n="about.p2"></p>
+      <p class="muted" data-i18n="about.p3"></p>
+    </div>
+  </section>
+
+  <section class="sec sec--tint" id="faq">
+    <div class="wrap wrap--narrow">
+      <h2 data-i18n="faq.title"></h2>
+      <details><summary data-i18n="faq.q1"></summary><p data-i18n="faq.a1"></p></details>
+      <details><summary data-i18n="faq.q2"></summary><p data-i18n="faq.a2"></p></details>
+      <details><summary data-i18n="faq.q3"></summary><p data-i18n="faq.a3"></p></details>
+      <details><summary data-i18n="faq.q4"></summary><p data-i18n="faq.a4"></p></details>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap wrap--narrow center">
+      <h2 data-i18n="contact.title"></h2>
+      <p class="sec__sub" data-i18n="contact.sub"></p>
+      <a class="btn btn--accent" data-wa-link href="#" target="_blank" rel="noopener" data-i18n="contact.wa"></a>
+      <p class="contact__line"><span data-i18n="contact.email"></span>: <a id="email-link" href="#"></a></p>
+      <p class="contact__line" id="wa-display"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span class="brand brand--foot"><img src="assets/logo-b.png" alt="" width="22" height="25"> Bahagia.Escape</span>
+    <span class="footer__tag" data-i18n="hero.tagline"></span>
+    <span class="footer__copy">© <span id="year"></span> Bahagia.Escape. <span data-i18n="footer.rights"></span></span>
+  </div>
+</footer>
+
+<a class="float-wa" data-wa-link href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.1-1 .2-3.300-.7-2.800-1.100-4.500-3.900-4.700-4.100-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.2.1.3 0 .5l-.3.4-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.700-.1 1.300Z"/></svg>
+  <span data-i18n="float.wa"></span>
+</a>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
