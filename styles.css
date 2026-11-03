@@ -61,6 +61,7 @@ p{margin:0 0 1em}
 .sec{padding:56px 0}
 .sec--tint{background:var(--cream)}
 .sec__sub{color:var(--muted);max-width:60ch;margin-bottom:1.8rem}
+.center .sec__sub{margin-left:auto;margin-right:auto}
 .grid{display:grid;gap:16px}
 .grid--4{grid-template-columns:1fr}
 .grid--fleet{grid-template-columns:1fr}
