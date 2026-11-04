@@ -64,6 +64,7 @@ p{margin:0 0 1em}
   .hero__in{grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:center}
   .hero__text{padding-bottom:72px}
   .hero__person{width:100%;justify-self:end;align-self:end}
+  .hero__person img{transform: translateY(-35px);margin-bottom: -35px;}
 }
 
 /* Sections */
