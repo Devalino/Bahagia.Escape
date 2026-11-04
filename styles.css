@@ -42,21 +42,29 @@ p{margin:0 0 1em}
 .nav__links a:hover{color:var(--green)}
 .nav__right{display:flex;align-items:center;gap:10px}
 .lang{display:flex;align-items:center;gap:2px;color:var(--muted)}
-.lang button{background:none;border:0;padding:8px 6px;font:600 .9rem var(--font-b);color:var(--muted);cursor:pointer;border-radius:6px}
+.lang button{white-space:nowrap;background:none;border:0;padding:8px 5px;font:600 .9rem var(--font-b);color:var(--muted);cursor:pointer;border-radius:6px}
 .lang button[aria-pressed="true"]{color:var(--green-d);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--orange)}
 @media(min-width:860px){.nav__links{display:flex}}
-@media(max-width:380px){.nav .btn--sm{display:none}}
+@media(max-width:420px){.nav .btn--sm{display:none}}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--cream),var(--paper));padding:56px 0 64px}
-.hero__in{position:relative;z-index:1}
-.hero__in>*{max-width:720px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--cream),var(--paper));padding:56px 0 0}
+.hero__in{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:8px}
+.hero__text{padding-bottom:8px}
+.hero__text>*{max-width:720px}
 .eyebrow{font:600 .85rem var(--font-b);letter-spacing:.08em;text-transform:uppercase;color:var(--olive);margin-bottom:.8em}
 .lead{font-size:1.125rem;color:#34433a;max-width:56ch}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin:1.6rem 0 1rem}
 .hero__note{font-size:.9rem;color:var(--muted);margin:0}
-.hero__leaf{position:absolute;right:-90px;bottom:-110px;width:380px;color:var(--lime);opacity:.22;pointer-events:none}
-@media(min-width:860px){.hero{padding:96px 0 104px}.hero__leaf{right:2%;bottom:-60px;width:460px}}
+.hero__person{position:relative;justify-self:center;width:min(300px,78vw);align-self:end}
+.hero__person::before{content:"";position:absolute;left:50%;bottom:0;width:112%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(166,206,57,.38),rgba(166,206,57,.14) 62%,transparent 72%);z-index:-1}
+.hero__person img{width:100%;height:auto;display:block}
+@media(min-width:860px){
+  .hero{padding:72px 0 0}
+  .hero__in{grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:center}
+  .hero__text{padding-bottom:72px}
+  .hero__person{width:100%;justify-self:end;align-self:end}
+}
 
 /* Sections */
 .sec{padding:56px 0}
