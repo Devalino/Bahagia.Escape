@@ -5,6 +5,7 @@
   "use strict";
 
   const LS_KEY = "be_lang";
+  const LOCALES = { id: "id-ID", en: "en-GB", zh: "zh-CN" };
   let lang = "en";
 
   /* ---------- util ---------- */
@@ -17,9 +18,11 @@
 
   function detectLang() {
     const saved = safeGet();
-    if (saved === "id" || saved === "en") return saved;
+    if (saved === "id" || saved === "en" || saved === "zh") return saved;
     const nav = (navigator.language || "en").toLowerCase();
-    return nav.startsWith("id") ? "id" : "en";
+    if (nav.startsWith("id")) return "id";
+    if (nav.startsWith("zh")) return "zh";
+    return "en";
   }
 
   const ICONS = {
@@ -144,14 +147,14 @@
   /* ---------- pesan WhatsApp ---------- */
   function fmtDate(iso) {
     const [y, m, d] = iso.split("-").map(Number);
-    return new Intl.DateTimeFormat(lang === "id" ? "id-ID" : "en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })
+    return new Intl.DateTimeFormat(LOCALES[lang] || "en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })
       .format(new Date(Date.UTC(y, m - 1, d)));
   }
 
   function buildMessage(f) {
     const g = (n) => f.elements[n].value.trim();
     const veh = VEHICLES.find((x) => x.id === g("vehicle"));
-    const vehicleTxt = veh ? veh.name + (lang === "id" ? " (atau yang tersedia)" : " (or any available)") : t("wa.vehicleAny");
+    const vehicleTxt = veh ? veh.name + t("wa.vehicleOrAny") : t("wa.vehicleAny");
     const lines = [
       t("wa.greeting"), "",
       `${t("wa.service")}: ${t("svcName." + g("service"))}`,

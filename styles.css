@@ -3,7 +3,7 @@
   --orange:#F08A24; --orange-d:#d9740f; --cream:#F1EDE0; --paper:#FBF9F3;
   --ink:#1d2a20; --muted:#5d6a5f; --line:#ddd6c3; --danger:#b3261e;
   --radius:14px;
-  --font-h:"Fraunces",Georgia,serif; --font-b:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-h:"Fraunces",Georgia,"Noto Serif SC","Songti SC",serif; --font-b:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
@@ -12,6 +12,7 @@ img{max-width:100%;display:block}
 a{color:var(--green)}
 h1,h2,h3{font-family:var(--font-h);line-height:1.15;margin:0 0 .5em;color:var(--green-d)}
 h1{font-size:clamp(2rem,6vw,3.4rem)}
+h1,h2{text-wrap:balance}
 h2{font-size:clamp(1.6rem,4vw,2.2rem)}
 h3{font-size:1.15rem}
 p{margin:0 0 1em}
